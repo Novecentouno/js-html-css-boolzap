@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+}
+
+.sfondo_superiore {
+    background-color: #169688;
+    height: 150px;
+    width: 100%;
+}
+
+.sfondo_inferiore {
+    background-color: #D6DBD7;
+    height: calc(100vh - 150px);
+    width: 100%;
+}
+
+.container_wz {
+    width: calc(100vw - 200px);
+    height: calc(100vh - 40px);
+    /* background-color: red; */
+    position: fixed;
+    z-index: 100;
+    top: 20px;
+    right: 100px;
+}
+
+.sidebar_contact {
+    height: 100%;
+    width: 35%;
+    background-color: #FFFFFF;
+    border: 1px solid #D6D6D6;
+}
+
+.sidebar_messages {
+    height: 100%;
+    width: 65%;
+    background-image: url('../img/mine.jpg');
+    border: 1px solid #D6D6D6;
+}
+
+.my_navbar {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background-color: #EAEAEA;
+}
+.img_contact {
+    height: 100%;
+}
+
+.icon_list {
+    padding: 29px 0;
+    height: 100%;
+}
+
+.icon_list i {
+    font-size: 25px;
+    margin: 0 7px;
+    color: #B1B1B1;
+}
+
+.info_message {
+    position: relative;
+    left: 0;
+}
+
+.info_message p {
+    color: #6B7376;
+    font-size: 13px;
+}
