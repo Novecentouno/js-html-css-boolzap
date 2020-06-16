@@ -9,6 +9,13 @@ img {
     border-radius: 50%;
 }
 
+.template {
+    display: none;
+}
+
+.todo {
+    display: none;
+}
 .wrapper {
     height: 100vh;
     width: 100vw;
@@ -77,7 +84,7 @@ img {
 }
 
 .bar_notifiche .campanellina {
-    width: 20%;
+    flex-basis: 20%;
     text-align: center;
 }
 
@@ -90,7 +97,7 @@ img {
 }
 
 .bar_notifiche .text_notifiche {
-    width: 60%;
+    flex-basis: 60%;
 }
 
 .bar_notifiche .text_notifiche a {
@@ -164,13 +171,17 @@ img {
     justify-content: space-between;
 }
 .messaggio_utente {
-    width: 100%;
+    flex-basis: 100%;
     max-height: 200px;
     display: flex;
     justify-content: flex-end;
+    display: none;
+}
+.messaggio_utente.active {
+    display: flex;
 }
 .messaggio_pc {
-    width: 100%;
+    flex-basis: 100%;
     max-height: 200px;
     display: flex;
     justify-content: flex-start;
@@ -178,7 +189,7 @@ img {
 .messaggio_verde {
     height: 50px;
     background-color: #D6F8BC;
-    width: 300px;
+    width: 200px;
     border-radius: 15px;
     padding: 15px;
     display: flex;
@@ -189,7 +200,7 @@ img {
 .messaggio_bianco {
     height: 50px;
     background-color: white;
-    width: 300px;
+    width: 200px;
     border-radius: 15px;
     padding: 15px;
     display: flex;
