@@ -35,23 +35,18 @@ img {
     top: 20px;
     right: 100px;
 }
-
+/* INIZIO COLONNA CONTATTI */
 .sidebar_contact {
     height: 100%;
     width: 35%;
     background-color: #FFFFFF;
     border: 1px solid #D6D6D6;
-}
-
-.sidebar_messages {
-    height: 100%;
-    width: 65%;
-    background-image: url('../img/mine.jpg');
-    border: 1px solid #D6D6D6;
+    overflow: auto;
 }
 
 .my_navbar {
     display: flex;
+    justify-content: flex-start;
     height: 100px;
     width: 100%;
     background-color: #EAEAEA;
@@ -63,6 +58,7 @@ img {
 .icon_list {
     padding: 29px 0;
     height: 100%;
+    margin-left: auto;
 }
 
 .icon_list i {
@@ -71,12 +67,47 @@ img {
     color: #B1B1B1;
 }
 
+
+/* INIZIO COLONNA MESSAGGI */
+.sidebar_messages {
+    height: 100%;
+    width: 65%;
+    background-image: url('../img/mine.jpg');
+    border: 1px solid #D6D6D6;
+    overflow: auto;
+}
+
 .info_message {
-    position: relative;
-    left: 0;
+    padding-left: 20px;
+    padding-top: 20px;
 }
 
 .info_message p {
     color: #6B7376;
     font-size: 13px;
+}
+
+.area_message {
+    width: 100%;
+    height: calc(100% - 200px);
+    overflow: auto;
+}
+
+.area_text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    background-color: #F3EEEA;
+}
+
+.emoji_text i ,
+.invio_text i {
+    font-size: 35px;
+    margin: 0 7px;
+    color: #6B7376;
+}
+
+.area_input {
+    width: 80%;
 }
