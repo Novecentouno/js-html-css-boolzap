@@ -4,13 +4,11 @@ $(document).ready(
         $(document).on('click', '.invio_text',
             function() {
             aggiungiMessaggio();
-            $('.messaggio_utente').show();
         });
         $('.form_messaggio').keypress(
             function(event) {
             if(event.which === 13 || event.keycode === 13) {
                 aggiungiMessaggio();
-                $('.messaggio_utente').addClass('active');
             }
         });
         // function aggiungiMessaggio(messaggioDaAggiungere) {
@@ -22,11 +20,10 @@ $(document).ready(
 
         function aggiungiMessaggio() {
             var testoMessaggio = $('.form_messaggio').val();
-            console.log(testoMessaggio);
             if(testoMessaggio != '') {
-                var nuovoMessaggio = $('.templete .messaggio_verde').clone();
+                var nuovoMessaggio = $('.templete .messaggio').clone();
                 nuovoMessaggio.children('.message_text').text(testoMessaggio);
-
+                nuovoMessaggio.addClass('inviato');
 
                 var data = new Date();
                 var oraCorrente = data.getHours();
@@ -35,7 +32,7 @@ $(document).ready(
 
                 nuovoMessaggio.children('.message_time').text(oraEsatta);
 
-                $('.messaggio_verde').append(nuovoMessaggio);
+                $('.finestra_messaggio').append(nuovoMessaggio);
                 $('.form_messaggio').val('');
             }
         }
@@ -46,23 +43,4 @@ $(document).ready(
             }
             return numero;
         }
-        $('.form_ricerca').val('');
-        $('.form_ricerca').keypress(
-            function(event) {
-            if(event.which === 13 || event.keycode === 13) {
-                $('.scheda_contatto').each();
-
-            }
-        });
-
-        // $('.scheda_contatto').each(function () {
-        //     $('.info_messaggio > h5').val();
-        //     console.log($('.info_messaggio > h5').val());
-        // });
-
-
-
-
-
-
 });

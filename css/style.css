@@ -182,6 +182,7 @@ img {
     padding: 20px 18px;
     position: relative;
     clear: both;
+    margin: 10px 0;
 }
 
 .message_time {
