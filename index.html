@@ -39,6 +39,7 @@
                     <!-- Fine barra di notifiche -->
                     <!-- Inizio barra di ricerca -->
                     <div class="bar_ricerca">
+                        <label><i class="fa fa-search"></i></label>
                         <input class="form_ricerca form-control form-control-md" type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <!-- Fine barra di ricerca -->
@@ -58,7 +59,7 @@
                                 <img src="img/avatar_2.jpg" alt="avatar">
                             </div>
                             <div class="info_messaggio">
-                                <h5>Michele</h5>
+                                <h5>Fabio</h5>
                                 <span>Non poteva essere altrimenti</span>
                             </div>
                         </div>
@@ -67,7 +68,7 @@
                                 <img src="img/avatar_3.jpg" alt="avatar">
                             </div>
                             <div class="info_messaggio">
-                                <h5>Michele</h5>
+                                <h5>Alessandro B.</h5>
                                 <span>Non poteva essere altrimenti</span>
                             </div>
                         </div>
@@ -76,7 +77,7 @@
                                 <img src="img/avatar_4.jpg" alt="avatar">
                             </div>
                             <div class="info_messaggio">
-                                <h5>Michele</h5>
+                                <h5>Alessandro L.</h5>
                                 <span>Non poteva essere altrimenti</span>
                             </div>
                         </div>
@@ -85,7 +86,7 @@
                                 <img src="img/avatar_5.jpg" alt="avatar">
                             </div>
                             <div class="info_messaggio">
-                                <h5>Michele</h5>
+                                <h5>Claudia</h5>
                                 <span>Non poteva essere altrimenti</span>
                             </div>
                         </div>
@@ -94,7 +95,7 @@
                                 <img src="img/avatar_6.jpg" alt="avatar">
                             </div>
                             <div class="info_messaggio">
-                                <h5>Michele</h5>
+                                <h5>Davide</h5>
                                 <span>Non poteva essere altrimenti</span>
                             </div>
                         </div>
@@ -103,7 +104,7 @@
                                 <img src="img/avatar_7.jpg" alt="avatar">
                             </div>
                             <div class="info_messaggio">
-                                <h5>Michele</h5>
+                                <h5>Federico</h5>
                                 <span>Non poteva essere altrimenti</span>
                             </div>
                         </div>
@@ -112,7 +113,7 @@
                                 <img src="img/avatar_8.jpg" alt="avatar">
                             </div>
                             <div class="info_messaggio">
-                                <h5>Michele</h5>
+                                <h5>Gianni</h5>
                                 <span>Non poteva essere altrimenti</span>
                             </div>
                         </div>
@@ -137,13 +138,14 @@
                         </div>
                     </nav>
                     <div class="area_message">
-                        <div class="messaggio_utente">
-                            <ul class="messaggio_verde">
-                            </ul>
-                        </div>
-                        <div class="messaggio_pc">
-                            <div class="messaggio_bianco">
-                                <span></span>
+                        <div class="finestra_messaggio">
+                            <div class="messaggio inviato">
+                                <span class="message_text"></span>
+                                <span class="message_time"></span>
+                            </div>
+                            <div class="messaggio ricevuto">
+                                <span class="message_text"></span>
+                                <span class="message_time"></span>
                             </div>
                         </div>
                     </div>
@@ -159,11 +161,20 @@
                         </div>
                     </div>
                     <!-- Template per inserire messaggi dell'utente -->
-                    <div class="template">
+                    <!-- <div class="template">
                         <li class="todo_item"></li>
                     </div>
                     <div class="todo">
                         <p></p>
+                    </div> -->
+
+                    <div class="templete">
+                        <div class="messaggio_utente inviato">
+                            <div class="messaggio_verde">
+                                <span class="message_text"></span>
+                                <span class="message_time"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Fine Colonna Messaggi -->
