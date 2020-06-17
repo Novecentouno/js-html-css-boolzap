@@ -1,6 +1,5 @@
 $(document).ready(
     function() {
-        $('.form_messaggio').val('');
         $(document).on('click', '.invio_text',
             function() {
             aggiungiMessaggio();
@@ -11,17 +10,11 @@ $(document).ready(
                 aggiungiMessaggio();
             }
         });
-        // function aggiungiMessaggio(messaggioDaAggiungere) {
-        //     var cloneMessaggio = $('.template2 .message_text').clone();
-        //     cloneMessaggio.prepend(messaggioDaAggiungere);
-        //     $('.messaggio_verde').append(cloneMessaggio);
-        //     $('.form_messaggio').val('');
-        // };
 
         function aggiungiMessaggio() {
             var testoMessaggio = $('.form_messaggio').val();
             if(testoMessaggio != '') {
-                var nuovoMessaggio = $('.templete .messaggio').clone();
+                var nuovoMessaggio = $('.template .messaggio').clone();
                 nuovoMessaggio.children('.message_text').text(testoMessaggio);
                 nuovoMessaggio.addClass('inviato');
 
@@ -34,6 +27,7 @@ $(document).ready(
 
                 $('.finestra_messaggio').append(nuovoMessaggio);
                 $('.form_messaggio').val('');
+                $('.finestra_messaggio').scrollTop($('.finestra_messaggio').height());
             }
         }
 
