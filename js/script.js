@@ -51,7 +51,6 @@ $(document).ready(
                 $('.finestra_messaggio').append(nuovoMessaggio);
                 $('.form_messaggio').val('');
                 $('.area_message').scrollTop($('.area_message').height());
-
         }
         // Normalizzare ora corrente
         function aggiungiLoZero(numero) {
@@ -62,10 +61,29 @@ $(document).ready(
         }
         // Ricerca Contatti
         var ricercaVuota = $('.form_ricerca').val('');
-        $('.form_ricerca').click(function(){
-            $('.scheda_contatto').each(function() {
-                $('h5').text();
-            })
+        // ricerca dei contatti
+        $('.form_ricerca').keyup(function(){
+            var cercaContatto = $(this).val().toLowerCase();
+            $('.scheda_contatto').each(function(){
+                var nomeFiltro = $(this).find('h5').text().toLowerCase();
+                if (nomeFiltro.includes(cercaContatto)) {
+                    $(this).show();
+                }else{
+                    $(this).hide();
+                }
+            });
         });
+
+
+
+
+
+
+
+        // $('.form_ricerca').click(function(){
+        //     $('.scheda_contatto').each(function() {
+        //         $('h5').text();
+        //     })
+        // });
 
 });
