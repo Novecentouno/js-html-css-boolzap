@@ -123,12 +123,12 @@
                 <!-- Fine Colonna Contatti -->
                 <!-- Inizio Colonna Messaggi -->
                 <div class="sidebar_messages float-right">
-                    <nav class="navbar my_navbar">
+                    <nav class="navbar my_navbar nav_img">
                         <div class="img_contact">
-                            <img src="img/avatar_1.jpg" alt="avatar">
+                            <img data-img="0" src="img/avatar_1.jpg" alt="avatar">
                         </div>
                         <div class="info_message">
-                            <h6>Michele</h6>
+                            <h6 class="nome_corrente">Michele</h6>
                             <p>Ultimo accesso oggi alle 15:40</p>
                         </div>
                         <div class="icon_list">
@@ -144,8 +144,13 @@
                                 <span class="message_time"></span>
                             </div>
                             <div class="messaggio ricevuto">
+                                <span class="freccina"><i class="fas fa-chevron-down"></i></span>
                                 <span class="message_text">Ciao,cosa hai fatto ieri?</span>
                                 <span class="message_time">12:30</span>
+                                <ul class="drop_down">
+                                    <li><a href="#">Info messaggio</a></li>
+                                    <li><a href="#">Cancella messaggio</a></li>
+                                </ul>
                             </div>
                         </div>
 
@@ -240,8 +245,13 @@
 
                     <div class="template">
                         <div class="messaggio">
+                            <span class="freccina"><i class="fas fa-chevron-down"></i></span>
                             <span class="message_text"></span>
                             <span class="message_time"></span>
+                            <ul class="drop_down">
+                                <li><a href="#">Info messaggio</a></li>
+                                <li><a href="#">Cancella messaggio</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>

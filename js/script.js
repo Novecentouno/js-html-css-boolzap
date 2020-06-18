@@ -48,9 +48,23 @@ $(document).ready(
 
                 nuovoMessaggio.children('.message_time').text(oraEsatta);
 
+
+
+
                 $('.finestra_messaggio.active').append(nuovoMessaggio);
+                // dropdown visibile
+                $('.messaggio').mouseenter(function() {
+                    $(this).children('.drop_down').addClass('active');
+                });
+                // funzione che fa scomparire il dropdown
+                $(document).on('click','.messaggio',
+                    function(){
+                        $(this).find('.drop_down').removeClass('active');
+                    });
                 $('.form_messaggio').val('');
                 $('.area_message').scrollTop($('.area_message').height());
+
+
             }
         }
         // Funzione messaggio computer dopo 1 secondo
@@ -69,8 +83,20 @@ $(document).ready(
                 nuovoMessaggio.children('.message_time').text(oraEsatta);
 
                 $('.finestra_messaggio.active').append(nuovoMessaggio);
+                // dropdown visibile
+                $('.messaggio').mouseenter(function() {
+                    $(this).children('.drop_down').addClass('active');
+                });
+                // funzione che fa scomparire il dropdown
+                $(document).on('click','.messaggio',
+                    function(){
+                        $(this).find('.drop_down').removeClass('active');
+                    });
                 $('.form_messaggio').val('');
                 $('.area_message').scrollTop($('.area_message').height());
+
+
+
         }
         // Normalizzare ora corrente
         function aggiungiLoZero(numero) {
@@ -99,7 +125,16 @@ $(document).ready(
             $('.finestra_messaggio').removeClass('active');
             var selettore = '.finestra_messaggio[data-message="' + dataContatto + '"]';
             $(selettore).addClass('active');
+            var contactName = $(this).find('h5').text();
+            $('.nome_corrente').text(contactName);
+            var immagineCorrente = $(this).find('img').attr('src');
+            $('.nav_img img').attr('src', immagineCorrente);
         });
+
+        // Funzione apparizione dropdown
+        // $('.messaggio').mouseenter(function() {
+        //     $(this).children('.drop_down').addClass('active');
+        // });
 
 
 

@@ -171,10 +171,6 @@ img {
     padding: 40px 70px;
 }
 
-.active {
-    display: block;
-}
-
 .messaggio {
     min-width: 150px;
     max-width: 60%;
@@ -185,6 +181,41 @@ img {
     position: relative;
     clear: both;
     margin: 10px 0;
+}
+.freccina {
+    display: none;
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    color: #B1B1B1;
+}
+
+.freccina:hover {
+    color: black;
+}
+
+.drop_down {
+    position: absolute;
+    width: 160px;
+    height: 70px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 7px;
+    top: 65px;
+    display: none;
+}
+
+.drop_down li {
+    list-style-type: none;
+}
+
+.drop_down a {
+    color: #B1B1B1;
+}
+
+.drop_down a:hover {
+    text-decoration: none;
+    color: black;
 }
 
 .message_time {
@@ -222,4 +253,8 @@ img {
 
 .area_input {
     width: 80%;
+}
+
+.active {
+    display: block;
 }
