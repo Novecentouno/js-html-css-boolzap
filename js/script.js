@@ -1,11 +1,31 @@
 $(document).ready(
     function() {
+        // RICERCA CONTATTI
+        $('.form_ricerca').keyup(function(){
+            // leggo il valore della input
+            var userSearch = $(this).val().toLowerCase();
+            // prendo tutti i contatti
+            var allContact = $('.scheda_contatto');
+            // per ogni contatto che il valore contenga la stringa inserita nell'input dall'utente
+            // se la stringa dell'utente è compresa nel nome,visualizzo il contatto oppure lo nascondo
+            allContact.each(function() {
+                var contactName = $(this).find('h5').text().toLowerCase();
+                // console.log(contactName);
+                if(contactName.includes(userSearch)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            })
+
+        })
+        // Invio messaggio al click dell'aereoplanino
         $(document).on('click', '.invio_text',
             function() {
             aggiungiMessaggio();
             setTimeout(computerMessaggio , 1000);
-
         });
+        // Invio messaggio al click 'INVIO'
         $('.form_messaggio').keypress(
             function(event) {
             if(event.which === 13 || event.keycode === 13) {
@@ -59,31 +79,28 @@ $(document).ready(
             }
             return numero;
         }
-        // Ricerca Contatti
-        var ricercaVuota = $('.form_ricerca').val('');
-        // ricerca dei contatti
-        $('.form_ricerca').keyup(function(){
-            var cercaContatto = $(this).val().toLowerCase();
-            $('.scheda_contatto').each(function(){
-                var nomeFiltro = $(this).find('h5').text().toLowerCase();
-                if (nomeFiltro.includes(cercaContatto)) {
-                    $(this).show();
-                }else{
-                    $(this).hide();
-                }
-            });
+        // Ricerca Contatti Alternativa
+        // var ricercaVuota = $('.form_ricerca').val('');
+        // $('.form_ricerca').keyup(function(){
+        //     var cercaContatto = $(this).val().toLowerCase();
+        //     $('.scheda_contatto').each(function(){
+        //         var nomeFiltro = $(this).find('h5').text().toLowerCase();
+        //         if (nomeFiltro.includes(cercaContatto)) {
+        //             $(this).show();
+        //         }else{
+        //             $(this).hide();
+        //         }
+        //     });
+        // });
+
+        // Funzione per selezionare la singola finestra della chat
+        $('.scheda_contatto').click(function() {
+            var dataContatto = $(this).attr('data-contact');
+            $('.finestra_messaggio').removeClass('active');
+            var selettore = '.finestra_messaggio[data-message="' + dataContatto + '"]';
+            $(selettore).addClass('active');
         });
 
 
-
-
-
-
-
-        // $('.form_ricerca').click(function(){
-        //     $('.scheda_contatto').each(function() {
-        //         $('h5').text();
-        //     })
-        // });
 
 });
