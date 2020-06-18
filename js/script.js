@@ -48,7 +48,7 @@ $(document).ready(
 
                 nuovoMessaggio.children('.message_time').text(oraEsatta);
 
-                $('.finestra_messaggio').append(nuovoMessaggio);
+                $('.finestra_messaggio.active').append(nuovoMessaggio);
                 $('.form_messaggio').val('');
                 $('.area_message').scrollTop($('.area_message').height());
             }
@@ -68,7 +68,7 @@ $(document).ready(
 
                 nuovoMessaggio.children('.message_time').text(oraEsatta);
 
-                $('.finestra_messaggio').append(nuovoMessaggio);
+                $('.finestra_messaggio.active').append(nuovoMessaggio);
                 $('.form_messaggio').val('');
                 $('.area_message').scrollTop($('.area_message').height());
         }
