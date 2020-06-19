@@ -16,6 +16,7 @@
             <div class="container_wz">
                 <!-- Inizio Colonna Contatti -->
                 <div class="sidebar_contact float-left">
+                    <!-- Inizio Navabar Utente -->
                     <nav class="navbar my_navbar">
                         <div class="img_contact">
                             <img src="img/avatar_io.jpg" alt="avatar">
@@ -26,6 +27,7 @@
                             <a href="#"><i class="fas fa-ellipsis-v"></i></a>
                         </div>
                     </nav>
+                    <!-- Fine Navabar Utente -->
                     <!-- Inizio barra di notifiche -->
                     <div class="bar_notifiche">
                         <div class="campanellina">
@@ -39,12 +41,15 @@
                     <!-- Fine barra di notifiche -->
                     <!-- Inizio barra di ricerca -->
                     <div class="bar_ricerca">
-                        <label><i class="fa fa-search"></i></label>
+                        <label>
+                            <i class="fa fa-search"></i>
+                        </label>
                         <input class="form_ricerca form-control form-control-md" type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <!-- Fine barra di ricerca -->
                     <!-- Inizio lista contatti -->
                     <div class="lista_contatti">
+
                         <div data-contact="0" class="scheda_contatto selected">
                             <div class="img_contact">
                                 <img src="img/avatar_1.jpg" alt="avatar">
@@ -53,6 +58,7 @@
                                 <h5>Michele</h5>
                                 <span>Sono un culturista</span>
                             </div>
+                            <div class="ora_scheda orario_corrente"></div>
                         </div>
 
                         <div data-contact="1" class="scheda_contatto">
@@ -63,6 +69,7 @@
                                 <h5>Fabio</h5>
                                 <span>Sono un giargiana</span>
                             </div>
+                            <div class="ora_scheda orario_corrente"></div>
                         </div>
 
                         <div data-contact="2" class="scheda_contatto">
@@ -73,6 +80,7 @@
                                 <h5>Alessandro B.</h5>
                                 <span>Vorrei comprarmi una casetta in Canadà</span>
                             </div>
+                            <div class="ora_scheda orario_corrente"></div>
                         </div>
 
                         <div data-contact="3" class="scheda_contatto">
@@ -83,6 +91,7 @@
                                 <h5>Alessandro L.</h5>
                                 <span>Chi mi ama mi segua</span>
                             </div>
+                            <div class="ora_scheda orario_corrente"></div>
                         </div>
 
                         <div data-contact="4" class="scheda_contatto">
@@ -93,6 +102,7 @@
                                 <h5>Riccardo</h5>
                                 <span>Musicista amante degli animali</span>
                             </div>
+                            <div class="ora_scheda orario_corrente"></div>
                         </div>
 
                         <div data-contact="5" class="scheda_contatto">
@@ -103,6 +113,7 @@
                                 <h5>Claudia</h5>
                                 <span>Mi piace il trucco e parrucco</span>
                             </div>
+                            <div class="ora_scheda orario_corrente"></div>
                         </div>
 
                         <div data-contact="6" class="scheda_contatto">
@@ -113,6 +124,7 @@
                                 <h5>Federico</h5>
                                 <span>Vorrei la pelle nera</span>
                             </div>
+                            <div class="ora_scheda orario_corrente"></div>
                         </div>
 
                         <div data-contact="7" class="scheda_contatto">
@@ -123,21 +135,27 @@
                                 <h5>Gianni</h5>
                                 <span>Mi piacciono le famiglie numerose</span>
                             </div>
+                            <div class="ora_scheda orario_corrente"></div>
                         </div>
+
                     </div>
                     <!-- Fine lista contatti -->
                 </div>
                 <!-- Fine Colonna Contatti -->
                 <!-- Inizio Colonna Messaggi -->
                 <div class="sidebar_messages float-right">
+                    <!-- Inizio Navabar Amico Utente -->
                     <nav class="navbar my_navbar nav_img">
+                        <!-- Immagine Amico Utente Corrente -->
                         <div class="img_contact">
                             <img data-img="0" src="img/avatar_1.jpg" alt="avatar">
                         </div>
+                        <!-- Accesso Amico Utente Corrente -->
                         <div class="info_message">
                             <h6 class="nome_corrente">Michele</h6>
-                            <p>Ultimo accesso oggi alle 15:40</p>
+                            <p>Ultimo accesso oggi alle <span class="orario_corrente"></span></p>
                         </div>
+                        <!-- Icone Navabar Amico Utente -->
                         <div class="icon_list">
                             <a href="#">
                                 <i class="fas fa-search-dollar"></i>
@@ -150,8 +168,10 @@
                             </a>
                         </div>
                     </nav>
+                    <!-- Fine Navabar Amico Utente -->
                     <!-- Inizio Area Messaggi -->
                     <div class="area_message">
+
                         <div data-message="0" class="finestra_messaggio active">
                             <div class="messaggio">
                                 <span class="message_text"></span>
@@ -327,6 +347,7 @@
                                 </ul>
                             </div>
                         </div>
+
                     </div>
                     <!-- Fine Area Messaggi -->
                     <!-- Inizio Area Input Messaggio -->

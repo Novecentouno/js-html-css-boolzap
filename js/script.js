@@ -90,11 +90,19 @@ $(document).ready(
                 var oraEsatta = aggiungiLoZero(oraCorrente) + ':' + aggiungiLoZero(minutoCorrente);
 
                 nuovoMessaggio.children('.message_time').text(oraEsatta);
-
                 $('.finestra_messaggio.active').append(nuovoMessaggio);
                 $('.form_messaggio').val('');
                 $('.area_message').scrollTop($('.area_message').prop('scrollHeight'));
         }
+        // Inseirire l'orario corrente
+        var data = new Date();
+        var oraCorrente = data.getHours();
+        var minutoCorrente = data.getMinutes();
+        var oraEsatta = aggiungiLoZero(oraCorrente) + ':' + aggiungiLoZero(minutoCorrente);
+        $('.orario_corrente').text(oraEsatta);
+
+
+
 
         // Normalizzare ora corrente
         function aggiungiLoZero(numero) {
