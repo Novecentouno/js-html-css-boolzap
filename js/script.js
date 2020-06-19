@@ -1,5 +1,25 @@
 $(document).ready(
     function() {
+        // funzione che rende visibile la dropdown al click sulla '.freccina'
+        $(document).on('click','.freccina', function() {
+            // toglie la visibilità al dropdown non selezionato
+            $(this).parent().siblings().find('.drop_down').removeClass('active');
+            // da la visibilità al dropdown selezionato
+            $(this).siblings('.drop_down').toggleClass('active');
+        });
+        // funzione che elimina la dropdown al click sul tasto elimina
+        $(document).on('click','.elimina', function() {
+            $(this).closest('.messaggio').remove();
+        });
+        // funzione che applica il background color alla scheda contatto sleezionata
+        $('.scheda_contatto').click(function(){
+            // rimuove la classe 'selected' alle schede contatto non selezionate
+            $('.scheda_contatto').removeClass('selected');
+            // aggiunge la classe 'selected' alla scheda contatto selezionata
+            $(this).addClass('selected');
+        });
+
+
         // RICERCA CONTATTI
         $('.form_ricerca').keyup(function(){
             // leggo il valore della input
@@ -47,22 +67,9 @@ $(document).ready(
                 var oraEsatta = aggiungiLoZero(oraCorrente) + ':' + aggiungiLoZero(minutoCorrente);
 
                 nuovoMessaggio.children('.message_time').text(oraEsatta);
-
-
-
-
                 $('.finestra_messaggio.active').append(nuovoMessaggio);
-                // dropdown visibile
-                $('.messaggio').mouseenter(function() {
-                    $(this).children('.drop_down').addClass('active');
-                });
-                // funzione che fa scomparire il dropdown
-                $(document).on('click','.messaggio',
-                    function(){
-                        $(this).find('.drop_down').removeClass('active');
-                    });
                 $('.form_messaggio').val('');
-                $('.area_message').scrollTop($('.area_message').height());
+                $('.area_message').scrollTop($('.area_message').prop('scrollHeight'));
 
 
             }
@@ -83,17 +90,8 @@ $(document).ready(
                 nuovoMessaggio.children('.message_time').text(oraEsatta);
 
                 $('.finestra_messaggio.active').append(nuovoMessaggio);
-                // dropdown visibile
-                $('.messaggio').mouseenter(function() {
-                    $(this).children('.drop_down').addClass('active');
-                });
-                // funzione che fa scomparire il dropdown
-                $(document).on('click','.messaggio',
-                    function(){
-                        $(this).find('.drop_down').removeClass('active');
-                    });
                 $('.form_messaggio').val('');
-                $('.area_message').scrollTop($('.area_message').height());
+                $('.area_message').scrollTop($('.area_message').prop('scrollHeight'));
 
 
 
@@ -130,12 +128,5 @@ $(document).ready(
             var immagineCorrente = $(this).find('img').attr('src');
             $('.nav_img img').attr('src', immagineCorrente);
         });
-
-        // Funzione apparizione dropdown
-        // $('.messaggio').mouseenter(function() {
-        //     $(this).children('.drop_down').addClass('active');
-        // });
-
-
 
 });

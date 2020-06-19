@@ -132,6 +132,9 @@ img {
     border-bottom: 1px solid #F5F5F5;
 }
 
+.scheda_contatto.selected {
+    background-color: lightgrey;
+}
 .info_messaggio {
     padding-left: 20px;
 }
@@ -188,10 +191,11 @@ img {
     top: 3px;
     right: 10px;
     color: #B1B1B1;
+    cursor: pointer;
 }
 
-.freccina:hover {
-    color: black;
+.messaggio:hover .freccina {
+    display: block;
 }
 
 .drop_down {
@@ -203,6 +207,10 @@ img {
     padding: 10px 7px;
     top: 65px;
     display: none;
+    z-index: 1;
+}
+.drop_down.active {
+    display: block;
 }
 
 .drop_down li {
