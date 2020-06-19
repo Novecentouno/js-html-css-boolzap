@@ -11,6 +11,7 @@ $(document).ready(
         $(document).on('click','.elimina', function() {
             $(this).closest('.messaggio').remove();
         });
+
         // funzione che applica il background color alla scheda contatto sleezionata
         $('.scheda_contatto').click(function(){
             // rimuove la classe 'selected' alle schede contatto non selezionate
@@ -70,8 +71,9 @@ $(document).ready(
                 $('.finestra_messaggio.active').append(nuovoMessaggio);
                 $('.form_messaggio').val('');
                 $('.area_message').scrollTop($('.area_message').prop('scrollHeight'));
-
-
+            } else if (testoMessaggio === '') {
+                nuovoMessaggio.children('.message_text').text();
+                nuovoMessaggio.addClass('inviato');
             }
         }
         // Funzione messaggio computer dopo 1 secondo
@@ -92,10 +94,8 @@ $(document).ready(
                 $('.finestra_messaggio.active').append(nuovoMessaggio);
                 $('.form_messaggio').val('');
                 $('.area_message').scrollTop($('.area_message').prop('scrollHeight'));
-
-
-
         }
+
         // Normalizzare ora corrente
         function aggiungiLoZero(numero) {
             if(numero < 10) {
