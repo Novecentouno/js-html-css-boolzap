@@ -220,6 +220,14 @@ img {
     display: block;
 }
 
+.doppia_spunta {
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    right: 6px;
+    color: #29A5DC;
+}
+
 .drop_down {
     position: absolute;
     width: 160px;
@@ -251,7 +259,7 @@ img {
 .message_time {
     position: absolute;
     bottom: 7px;
-    right: 7px;
+    right: 25px;
     font-size: 10px;
     color: #b6b9bb;
 }

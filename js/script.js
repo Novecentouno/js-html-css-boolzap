@@ -38,22 +38,27 @@ $(document).ready(
                     $(this).hide();
                 }
             })
-
         })
+
         // Invio messaggio al click dell'aereoplanino
         $(document).on('click', '.invio_text',
             function() {
             aggiungiMessaggio();
-            setTimeout(computerMessaggio , 1000);
+            $('#sta_scrivendo').text('Sta scrivendo...');
+            setTimeout(computerMessaggio , 3000);
+            $('.doppia_spunta').show(3000);
         });
         // Invio messaggio al click 'INVIO'
         $('.form_messaggio').keypress(
             function(event) {
             if(event.which === 13 || event.keycode === 13) {
                 aggiungiMessaggio();
-                setTimeout(computerMessaggio , 1000);
+                $('#sta_scrivendo').text('Sta scrivendo...');
+                setTimeout(computerMessaggio , 3000);
+                $('.doppia_spunta').show(3000);
             }
         });
+
         // Funzione messaggio inserito utente
         function aggiungiMessaggio() {
             var testoMessaggio = $('.form_messaggio').val();
@@ -80,19 +85,20 @@ $(document).ready(
         function computerMessaggio() {
             var testoMessaggio = 'Ok va bene!';
 
-                var nuovoMessaggio = $('.template .messaggio').clone();
-                nuovoMessaggio.children('.message_text').text(testoMessaggio);
-                nuovoMessaggio.addClass('ricevuto');
+            var nuovoMessaggio = $('.template .messaggio').clone();
+            nuovoMessaggio.children('.message_text').text(testoMessaggio);
+            nuovoMessaggio.addClass('ricevuto');
 
-                var data = new Date();
-                var oraCorrente = data.getHours();
-                var minutoCorrente = data.getMinutes();
-                var oraEsatta = aggiungiLoZero(oraCorrente) + ':' + aggiungiLoZero(minutoCorrente);
+            var data = new Date();
+            var oraCorrente = data.getHours();
+            var minutoCorrente = data.getMinutes();
+            var oraEsatta = aggiungiLoZero(oraCorrente) + ':' + aggiungiLoZero(minutoCorrente);
 
-                nuovoMessaggio.children('.message_time').text(oraEsatta);
-                $('.finestra_messaggio.active').append(nuovoMessaggio);
-                $('.form_messaggio').val('');
-                $('.area_message').scrollTop($('.area_message').prop('scrollHeight'));
+            nuovoMessaggio.children('.message_time').text(oraEsatta);
+            $('.finestra_messaggio.active').append(nuovoMessaggio);
+            $('.form_messaggio').val('');
+            $('.area_message').scrollTop($('.area_message').prop('scrollHeight'));
+            $('#sta_scrivendo').text('Ultimo accesso oggi alle ' + oraEsatta );
         }
         // Inseirire l'orario corrente
         var data = new Date();
