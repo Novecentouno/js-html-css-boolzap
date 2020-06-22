@@ -46,7 +46,7 @@ $(document).ready(
             aggiungiMessaggio();
             $('#sta_scrivendo').text('Sta scrivendo...');
             setTimeout(computerMessaggio , 3000);
-            $('.doppia_spunta').show(3000);
+            $('.doppia_spunta').show(2000);
         });
         // Invio messaggio al click 'INVIO'
         $('.form_messaggio').keypress(
@@ -55,7 +55,7 @@ $(document).ready(
                 aggiungiMessaggio();
                 $('#sta_scrivendo').text('Sta scrivendo...');
                 setTimeout(computerMessaggio , 3000);
-                $('.doppia_spunta').show(3000);
+                $('.doppia_spunta').show(2000);
             }
         });
 
@@ -99,6 +99,7 @@ $(document).ready(
             $('.form_messaggio').val('');
             $('.area_message').scrollTop($('.area_message').prop('scrollHeight'));
             $('#sta_scrivendo').text('Ultimo accesso oggi alle ' + oraEsatta );
+            $('.messaggio.ricevuto .doppia_spunta i').hide();
         }
         // Inseirire l'orario corrente
         var data = new Date();
