@@ -294,3 +294,12 @@ img {
 .active {
     display: block;
 }
+
+@media screen and (max-width: 1095px) {
+    .info_messaggio span {
+        display: none;
+    }
+    .scheda_contatto .ora_scheda {
+        display: none;
+    }
+}
