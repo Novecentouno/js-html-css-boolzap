@@ -16,25 +16,20 @@ img {
 .wrapper {
     height: 100vh;
     width: 100vw;
-}
-
-.sfondo_superiore {
-    background-color: #169688;
-    height: 150px;
-    width: 100%;
-}
-
-.sfondo_inferiore {
-    background-color: #D6DBD7;
-    height: calc(100vh - 150px);
-    width: 100%;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #169688 0%,
+    #169688 15%,
+    #dcdbd2 15%,
+    #dcdbd2 100%);
 }
 
 .container_wz {
     width: calc(100vw - 200px);
     height: calc(100vh - 40px);
     position: fixed;
-    min-width: 900px;
     z-index: 100;
     top: 20px;
     right: 100px;
