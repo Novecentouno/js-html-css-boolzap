@@ -70,6 +70,9 @@ img {
     margin: 0 7px;
     color: #B1B1B1;
 }
+.icon_list i:hover {
+    color: #6B7376;
+}
 /* Barra di notifiche  */
 .bar_notifiche {
     height: 100px;

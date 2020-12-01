@@ -12,7 +12,7 @@ $(document).ready(
             $(this).closest('.messaggio').remove();
         });
 
-        // funzione che applica il background color alla scheda contatto sleezionata
+        // funzione che applica il background color alla scheda contatto selezionata
         $('.scheda_contatto').click(function(){
             // rimuove la classe 'selected' alle schede contatto non selezionate
             $('.scheda_contatto').removeClass('selected');
